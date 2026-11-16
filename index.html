@@ -1,26 +1,614 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
-    <title>Kodigo · Aprendé a programar</title>
     <meta charset="utf-8" />
-    <meta name="description" content="Kodigo: aprendé a programar con JavaScript, cursos y actividades interactivas" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kodigo — Aprendé a programar desde cero</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+      name="description"
+      content="Kodigo es una plataforma educativa que te enseña a programar desde cero: cursos, unidades, lecciones y actividades interactivas con corrección al instante, XP, rachas y logros."
     />
-    <link rel="icon" type="image/png" href="/kodigo.png" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" href="assets/img/kodigo-ghost.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kodigo — Aprendé a programar desde cero" />
+    <meta
+      property="og:description"
+      content="Gamifica tu aprendizaje de código: cursos, lecciones y actividades interactivas con XP, rachas y logros. Desde cero, a tu ritmo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/kodigo-ghost.png" />
+
+    <!-- Tipografías (mismas que la app: Manrope, Space Grotesk y JetBrains Mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <div id="q-app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- ════════════ A. NAVBAR ════════════ -->
+    <header class="navbar" id="navbar">
+      <div class="container navbar-inner">
+        <a class="brand" href="#inicio" aria-label="Kodigo — ir al inicio">
+          <img class="brand-ghost" src="assets/img/kodigo-ghost.png" alt="" width="40" height="38" />
+          <span class="brand-word">KODI<span>GO</span></span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+          <a href="#sobre" data-spy="sobre">Sobre Kodigo</a>
+          <a href="#como-funciona" data-spy="como-funciona">Cómo funciona</a>
+          <a href="#funcionalidades" data-spy="funcionalidades">Funcionalidades</a>
+          <a href="#galeria" data-spy="galeria">Galería</a>
+          <a href="#beneficios" data-spy="beneficios">Beneficios</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm nav-cta" href="#comenzar">Empezar</a>
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Abrir menú"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- ════════════ B. HERO ════════════ -->
+      <section class="hero" id="inicio" aria-label="Kodigo — aprende programación desde cero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-mark">//</span> PLATAFORMA EDUCATIVA DE PROGRAMACIÓN</p>
+            <h1 class="hero-title">
+              Nunca había sido tan
+              <span class="marker">fácil</span> aprender a
+              <span class="marker marker-alt">programar</span>.
+            </h1>
+            <p class="hero-sub">
+              Kodigo es una plataforma que te permite aprender a programar de forma fácil y
+              sencilla: cursos, unidades, lecciones y actividades interactivas, de cero a tu
+              primer programa.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-lg" href="#comenzar">
+                Empezar a aprender
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#como-funciona">Ver cómo funciona</a>
+            </div>
+            <ul class="hero-chips" aria-label="Destacados">
+              <li><i data-lucide="ghost"></i>Modo invitado incluido</li>
+              <li><i data-lucide="zap"></i>Corrección al instante</li>
+              <li><i data-lucide="shield-check"></i>Progreso guardado en tu cuenta</li>
+            </ul>
+          </div>
+
+          <!-- Composición visual: mockups reales de la app -->
+          <div class="hero-stage" aria-hidden="false">
+            <div class="stage-dotgrid" aria-hidden="true"></div>
+            <figure class="phone phone-main">
+              <img
+                src="assets/img/screens/screen-13-portal.png"
+                alt="Portal de Kodigo: progreso diario, continuar aprendiendo y cursos sugeridos"
+                width="390"
+                height="898"
+              />
+            </figure>
+            <figure class="phone phone-side">
+              <img
+                src="assets/img/screens/screen-04-camino.png"
+                alt="Unidad 1 Conceptos Básicos: camino de lecciones en el curso de JavaScript"
+                width="390"
+                height="898"
+                
+              />
+            </figure>
+            <div class="float-chip chip-racha" aria-hidden="true">
+              <i data-lucide="flame"></i>
+              <div><strong>Racha diaria</strong><span>se mantiene lección a lección</span></div>
+            </div>
+            <div class="float-chip chip-xp" aria-hidden="true">
+              <i data-lucide="star"></i>
+              <div><strong>+20 XP</strong><span>por cada lección aprobada</span></div>
+            </div>
+            <div class="stage-bubble" aria-hidden="true">
+              <img src="assets/img/fantasma-feliz.png" alt="" width="54" height="52" />
+              <span>Tu portal de aprendizaje<br />gamificado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ticker del catálogo -->
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker-track" id="ticker-track">
+            <span>JAVASCRIPT</span><span>·</span><span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>PYTHON</span><span>·</span><span>JAVA</span><span>·</span><span>C++</span><span>·</span><span>C#</span><span>·</span><span>NODE.JS</span><span>·</span><span>REACT</span><span>·</span><span>VUE</span><span>·</span><span>PHP</span><span>·</span><span>TYPESCRIPT</span><span>·</span><span>SQL</span><span>·</span><span>JAVASCRIPT</span><span>·</span><span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>PYTHON</span><span>·</span><span>JAVA</span><span>·</span><span>C++</span><span>·</span><span>C#</span><span>·</span><span>NODE.JS</span><span>·</span><span>REACT</span><span>·</span><span>VUE</span><span>·</span><span>PHP</span><span>·</span><span>TYPESCRIPT</span><span>·</span><span>SQL</span><span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ C. SOBRE KODIGO ════════════ -->
+      <section class="section" id="sobre" aria-labelledby="sobre-title">
+        <div class="container">
+          <div class="sobre-grid">
+            <div class="sobre-copy">
+              <p class="eyebrow"><span class="eyebrow-mark">//</span> QUÉ ES KODIGO</p>
+              <h2 class="section-title" id="sobre-title">
+                Aprender programación,<br />de verdad, desde cero.
+              </h2>
+              <p class="lead">
+                Kodigo es una plataforma educativa orientada al aprendizaje de programación:
+                cursos, unidades, lecciones y actividades prácticas pensadas para personas que
+                <strong>nunca escribieron una línea de código</strong>.
+              </p>
+              <p class="body-text">
+                Aprender a programar suele sentirse abrumador: sintaxis abstracta, correcciones que
+                llegan tarde y material que se abandona a mitad de camino. Kodigo invierte ese
+                orden — una lección breve, un ejemplo de código real y una práctica inmediata que
+                se corrige al instante. Repetís el ciclo hasta dominar el concepto, y solo entonces
+                se abre el siguiente paso.
+              </p>
+
+              <ul class="pillars">
+                <li>
+                  <span class="pillar-icon"><i data-lucide="graduation-cap"></i></span>
+                  <span><strong>Sin experiencia previa</strong><small>La primera unidad arranca en variables y datos, no en teoría densa.</small></span>
+                </li>
+                <li>
+                  <span class="pillar-icon"><i data-lucide="layers"></i></span>
+                  <span><strong>Aprendizaje progresivo</strong><small>Cada unidad desbloquea la siguiente solo cuando aprobás la anterior.</small></span>
+                </li>
+                <li>
+                  <span class="pillar-icon"><i data-lucide="zap"></i></span>
+                  <span><strong>Feedback al instante</strong><small>Cada actividad se corrige en el servidor y sabés exactamente qué pasó con tu respuesta.</small></span>
+                </li>
+              </ul>
+
+              <blockquote class="lema">
+                “Gamifica tu aprendizaje de código.”
+                <cite>— El lema de Kodigo</cite>
+              </blockquote>
+            </div>
+
+            <!-- Panel lateral: catálogo real + cifras del contenido -->
+            <aside class="catalog-panel" aria-label="Catálogo de cursos de Kodigo">
+              <div class="catalog-head">
+                <p class="catalog-title">CATÁLOGO DE CURSOS</p>
+                <span class="catalog-badge"><span class="live-dot"></span>EN EL SERVIDOR</span>
+              </div>
+
+              <ul class="course-grid">
+                <li class="course is-available">
+                  <img src="assets/img/cursos/javascriptLogo.webp" alt="Logo de JavaScript" width="34" height="34" />
+                  <span class="course-name">JavaScript</span>
+                  <span class="course-state">Disponible</span>
+                </li>
+                <li class="course is-available">
+                  <img src="assets/img/cursos/htmlLogo.png" alt="Logo de HTML" width="34" height="34" />
+                  <span class="course-name">HTML</span>
+                  <span class="course-state">Disponible</span>
+                </li>
+                <li class="course is-locked"><img src="assets/img/cursos/pythonLogo.webp" alt="" width="30" height="30" loading="lazy" /><span class="course-name">Python</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><img src="assets/img/cursos/cssLogo.svg" alt="" width="30" height="30" loading="lazy" /><span class="course-name">CSS</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><img src="assets/img/cursos/javaLogo.webp" alt="" width="30" height="30" loading="lazy" /><span class="course-name">Java</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><img src="assets/img/cursos/cppLogo.webp" alt="" width="30" height="30" loading="lazy" /><span class="course-name">C++</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><img src="assets/img/cursos/csharpLogo.webp" alt="" width="30" height="30" loading="lazy" /><span class="course-name">C#</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><span class="course-mono">NO</span><span class="course-name">Node.js</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><img src="assets/img/cursos/reactLogo.webp" alt="" width="30" height="30" loading="lazy" /><span class="course-name">React</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><img src="assets/img/cursos/vueLogo.webp" alt="" width="30" height="30" loading="lazy" /><span class="course-name">Vue</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><span class="course-mono">PH</span><span class="course-name">PHP</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><span class="course-mono">TS</span><span class="course-name">TypeScript</span><i data-lucide="lock" aria-hidden="true"></i></li>
+                <li class="course is-locked"><span class="course-mono">SQ</span><span class="course-name">SQL</span><i data-lucide="lock" aria-hidden="true"></i></li>
+              </ul>
+
+              <div class="catalog-stats" aria-label="Cifras del contenido publicado">
+                <div><strong>2</strong><span>cursos publicados</span></div>
+                <div><strong>20</strong><span>lecciones</span></div>
+                <div><strong>129</strong><span>actividades</span></div>
+                <div><strong>11</strong><span>tipos de actividad</span></div>
+              </div>
+              <p class="catalog-note">
+                JavaScript y HTML están publicados hoy. El resto del catálogo llega por etapas.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ D. CÓMO FUNCIONA ════════════ -->
+      <section class="section section-alt" id="como-funciona" aria-labelledby="recorrido-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> CÓMO FUNCIONA</p>
+          <h2 class="section-title" id="recorrido-title">De cero a tu primera<br />unidad aprobada, en 4 pasos.</h2>
+
+          <div class="recorrido">
+            <div class="recorrido-tabs" role="tablist" aria-label="Etapas del aprendizaje en Kodigo" id="recorrido-tabs">
+              <button class="recorrido-tab is-active" role="tab" id="tab-paso-1" aria-selected="true" aria-controls="panel-paso-1" data-tab="paso-1">
+                <span class="tab-num">01</span>
+                <span class="tab-body"><strong>Elegí tu lenguaje</strong><small>JavaScript o HTML para empezar</small></span>
+              </button>
+              <button class="recorrido-tab" role="tab" id="tab-paso-2" aria-selected="false" aria-controls="panel-paso-2" data-tab="paso-2" tabindex="-1">
+                <span class="tab-num">02</span>
+                <span class="tab-body"><strong>Seguí el camino</strong><small>Unidades y lecciones que se desbloquean</small></span>
+              </button>
+              <button class="recorrido-tab" role="tab" id="tab-paso-3" aria-selected="false" aria-controls="panel-paso-3" data-tab="paso-3" tabindex="-1">
+                <span class="tab-num">03</span>
+                <span class="tab-body"><strong>Aprendé y practicá</strong><small>Ejemplo real + actividad con feedback</small></span>
+              </button>
+              <button class="recorrido-tab" role="tab" id="tab-paso-4" aria-selected="false" aria-controls="panel-paso-4" data-tab="paso-4" tabindex="-1">
+                <span class="tab-num">04</span>
+                <span class="tab-body"><strong>Ganá XP y subí de nivel</strong><small>Aprobás, sumás XP y mantenés racha</small></span>
+              </button>
+            </div>
+
+            <div class="recorrido-stage">
+              <div class="recorrido-panels">
+                <figure class="recorrido-panel is-active" role="tabpanel" id="panel-paso-1" aria-labelledby="tab-paso-1" data-panel="paso-1">
+                  <div class="phone phone-mid">
+                    <img src="assets/img/screens/screen-03-lenguaje.png" alt="Pantalla para elegir qué lenguaje dominar: JavaScript, Python, Java y C++" width="390" height="898"  />
+                  </div>
+                  <figcaption>
+                    <span class="panel-tag">PASO 01 · BIENVENIDA</span>
+                    <strong>Elegí qué querés dominar</strong>
+                    <p>Al entrar, Kodigo te pregunta qué lenguaje te gustaría aprender y arma tu camino desde ahí. Hoy los caminos publicados son JavaScript y HTML.</p>
+                  </figcaption>
+                </figure>
+
+                <figure class="recorrido-panel" role="tabpanel" id="panel-paso-2" aria-labelledby="tab-paso-2" data-panel="paso-2" hidden>
+                  <div class="phone phone-mid">
+                    <img src="assets/img/screens/screen-04-camino.png" alt="Unidad 1 Conceptos Básicos: camino visual de Variables, Condicionales y Bucles" width="390" height="898"  />
+                  </div>
+                  <figcaption>
+                    <span class="panel-tag">PASO 02 · EL CAMINO</span>
+                    <strong>Avanzá por el camino de cada unidad</strong>
+                    <p>Cada unidad es un mapa de lecciones. Aprobás la lección anterior y recién ahí se desbloquea la siguiente — el progreso es tuyo, no del curso.</p>
+                  </figcaption>
+                </figure>
+
+                <figure class="recorrido-panel" role="tabpanel" id="panel-paso-3" aria-labelledby="tab-paso-3" data-panel="paso-3" hidden>
+                  <div class="phone phone-mid">
+                    <img src="assets/img/screens/screen-06-escribir.png" alt="Actividad: asigná el valor 10 a la variable puntos y muestrala en consola" width="390" height="898"  />
+                  </div>
+                  <figcaption>
+                    <span class="panel-tag">PASO 03 · LA PRÁCTICA</span>
+                    <strong>Leé, escribí y recibí feedback</strong>
+                    <p>Cada lección explica el concepto con un ejemplo de código real y termina en actividades: escribí, completá u ordená código y recibí la corrección al instante.</p>
+                  </figcaption>
+                </figure>
+
+                <figure class="recorrido-panel" role="tabpanel" id="panel-paso-4" aria-labelledby="tab-paso-4" data-panel="paso-4" hidden>
+                  <div class="phone phone-mid">
+                    <img src="assets/img/screens/screen-21-completada.png" alt="Clase completada: precisión 92%, tiempo 4:15 y +150 XP ganados" width="390" height="898"  />
+                  </div>
+                  <figcaption>
+                    <span class="panel-tag">PASO 04 · LA RECOMPENSA</span>
+                    <strong>Aprobá, sumá XP y seguí la racha</strong>
+                    <p>Para aprobar una lección necesitás 2 de cada 3 aciertos. La primera aprobación paga XP —20 más 5 por acierto—, suma nivel y extiende tu racha.</p>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <p class="recorrido-rule" aria-label="Regla de aprobación">
+                <span class="mono-label">REGLA DE APROBACIÓN</span>
+                <code>correctas ≥ ⌈total × 2/3⌉</code>
+                <span class="rule-examples">3→2 · 4→3 · 5→4 · 7→5</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ E. FUNCIONALIDADES ════════════ -->
+      <section class="section" id="funcionalidades" aria-labelledby="func-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> FUNCIONALIDADES</p>
+          <h2 class="section-title" id="func-title">Todo lo que pasa<br />dentro de Kodigo.</h2>
+
+          <div class="bento">
+            <article class="bcell bcell-a">
+              <div class="bcell-icon"><i data-lucide="list-checks"></i></div>
+              <h3>11 tipos de actividad interactiva</h3>
+              <p>
+                Selección múltiple, verdadero/falso, completar texto, completar código, ordenar,
+                relacionar, escribir código, corregir código, predicción de salida y bloques. La
+                corrección ocurre en el servidor — el cliente nunca decide si tu respuesta es correcta.
+              </p>
+              <ul class="chip-row" aria-label="Tipos de actividad">
+                <li>selección</li><li>verdadero/falso</li><li>completar texto</li><li>completar código</li><li>ordenar</li><li>relacionar</li><li>escribir código</li><li>corregir código</li><li>salida de código</li><li>predecir</li><li>bloques</li>
+              </ul>
+            </article>
+
+            <article class="bcell bcell-b">
+              <div class="bcell-icon"><i data-lucide="route"></i></div>
+              <h3>Camino de unidades y lecciones</h3>
+              <p>
+                JavaScript tiene 3 unidades — Conceptos básicos, Control de flujo y Estructuras y
+                datos — y 10 lecciones que se desbloquean aprobando la anterior, solo para tu
+                usuario.
+              </p>
+            </article>
+
+            <article class="bcell bcell-c">
+              <div class="bcell-icon"><i data-lucide="code-2"></i></div>
+              <h3>Lecciones con código real</h3>
+              <p>Cada concepto llega con explicación y ejemplo ejecutable.</p>
+              <pre class="code-block" aria-hidden="true"><code>let nombre = "Ana";
+let edad = 18;
+console.log(nombre);
+console.log(edad);</code></pre>
+            </article>
+
+            <article class="bcell bcell-d">
+              <div class="bcell-icon"><i data-lucide="star"></i></div>
+              <h3>XP y niveles</h3>
+              <p>Cada lección aprobada por primera vez otorga <strong>20 + 5 XP por acierto</strong>. Tu nivel se calcula en el servidor y sube solo.</p>
+            </article>
+
+            <article class="bcell bcell-e">
+              <div class="bcell-icon"><i data-lucide="flame"></i></div>
+              <h3>Rachas diarias</h3>
+              <p>Tu racha crece día a día y se muestra en tu portal y en tu perfil. Un mal día no borra el progreso — pero volver sí lo sostiene.</p>
+            </article>
+
+            <article class="bcell bcell-f">
+              <div class="bcell-icon"><i data-lucide="trophy"></i></div>
+              <h3>Logros y recompensas</h3>
+              <p>Objetivos con recompensa en XP, progreso visible y pago único: cada logro se desbloquea solo cuando practicás.</p>
+            </article>
+
+            <article class="bcell bcell-g">
+              <div class="bcell-icon"><i data-lucide="chart-column"></i></div>
+              <h3>Estadísticas reales</h3>
+              <p>Precisión, XP total, nivel, racha, lecciones, unidades y logros — todo calculado desde tu progreso, no estimado.</p>
+            </article>
+
+            <article class="bcell bcell-h">
+              <div class="bcell-icon"><i data-lucide="users"></i></div>
+              <h3>Amigos y Liga de Honor</h3>
+              <p>Agregá amigos, mirá su actividad y compará tu progreso en la Liga de Honor, el ranking entre desarrolladores de Kodigo.</p>
+            </article>
+
+            <article class="bcell bcell-i">
+              <div class="bcell-icon"><i data-lucide="book-open-text"></i></div>
+              <h3>Diccionario y repaso</h3>
+              <p>Glosario de programación con búsqueda, más un modo repaso para afianzar lo aprendido antes de seguir avanzando.</p>
+            </article>
+
+            <article class="bcell bcell-j">
+              <div class="bcell-icon"><i data-lucide="ghost"></i></div>
+              <h3>Modo invitado</h3>
+              <p>Practicá sin crear cuenta. Si te registrás después, tu sesión se convierte en cuenta y tu progreso no se pierde.</p>
+            </article>
+
+            <!-- Franja transversal: evento especial -->
+            <article class="bcell bcell-k">
+              <span class="event-tag"><i data-lucide="rocket"></i>EVENTO ESPECIAL</span>
+              <div class="event-body">
+                <h3>Desafío ExpoTécnica</h3>
+                <p>
+                  El evento competitivo de Kodigo: un cuestionario cronometrado de JavaScript, el
+                  minijuego <strong>Core Defender</strong> —defendé el núcleo del código con tu
+                  escudo orbital— y un ranking público en tiempo real.
+                </p>
+              </div>
+              <span class="event-mono">JS + CORE&nbsp;DEFENDER</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ F. GALERÍA ════════════ -->
+      <section class="section section-alt" id="galeria" aria-labelledby="galeria-title">
+        <div class="container">
+          <div class="galeria-head">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-mark">//</span> GALERÍA DE LA APP</p>
+              <h2 class="section-title" id="galeria-title">Por dentro<br />de Kodigo.</h2>
+            </div>
+            <div class="galeria-nav">
+              <p class="galeria-counter"><span id="galeria-current">1</span> / <span id="galeria-total">12</span></p>
+              <div class="galeria-arrows">
+                <button type="button" class="icon-btn" id="galeria-prev" aria-label="Ver pantalla anterior">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="icon-btn" id="galeria-next" aria-label="Ver pantalla siguiente">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="galeria-progress" aria-hidden="true"><div class="galeria-progress-fill" id="galeria-progress"></div></div>
+
+          <div class="galeria-track" id="galeria-track" tabindex="0" aria-label="Pantallas de Kodigo, deslizá para recorrer">
+            <figure class="shot" data-caption="Portal — tu progreso diario y qué sigue">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Portal"><img src="assets/img/screens/screen-13-portal.png" alt="Portal de Kodigo con progreso diario, continuar aprendiendo y cursos sugeridos" width="390" height="898"  /></button>
+              <figcaption>Portal</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Unidad 1 — el camino de lecciones">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Camino de unidad"><img src="assets/img/screens/screen-04-camino.png" alt="Unidad 1 Conceptos Básicos con el camino Variables y Condicionales" width="390" height="898"  /></button>
+              <figcaption>Camino de unidad</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Lección — ejemplo de código y resultado">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Ejemplo de código"><img src="assets/img/screens/screen-05-ejemplo.png" alt="Ejemplo de código con variables y resultado de ejecución" width="390" height="898"  /></button>
+              <figcaption>Ejemplo de código</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Actividad — escribí código desde la primera lección">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Escribí el código"><img src="assets/img/screens/screen-06-escribir.png" alt="Actividad para asignar 10 a la variable puntos y mostrarla en consola" width="390" height="898"  /></button>
+              <figcaption>Escribí el código</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Actividad — completá la línea que falta">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Completá la línea"><img src="assets/img/screens/screen-07-completar.png" alt="Actividad completar la definición de la función saludar" width="390" height="898"  /></button>
+              <figcaption>Completá la línea</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Actividad — ordená los bloques del programa">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Ordená el bloque"><img src="assets/img/screens/screen-09-ordenar.png" alt="Actividad para ordenar los bloques del bucle for" width="390" height="898"  /></button>
+              <figcaption>Ordená el bloque</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Resultados — precisión, tiempo y XP ganados">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Clase completada"><img src="assets/img/screens/screen-21-completada.png" alt="Clase de Python lista con precisión 92% y +150 XP" width="390" height="898"  /></button>
+              <figcaption>Clase completada</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Liga de Honor — competí con otros desarrolladores">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Liga de Honor"><img src="assets/img/screens/screen-25-liga.png" alt="Liga de Honor con podio y clasificación por XP" width="390" height="898"  /></button>
+              <figcaption>Liga de Honor</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Amigos — compartí rachas y progreso">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Amigos"><img src="assets/img/screens/screen-26-amigos.png" alt="Pantalla de amigos con rachas compartidas y actividad reciente" width="390" height="898"  /></button>
+              <figcaption>Amigos</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Perfil — nivel, XP, racha y logros">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Mi perfil"><img src="assets/img/screens/screen-28-perfil.png" alt="Mi perfil con nivel 5, 2450 XP, racha de 7 días y logros destacados" width="390" height="898"  /></button>
+              <figcaption>Mi perfil</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Estadísticas — tu progreso real en números">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Mis estadísticas"><img src="assets/img/screens/screen-30-estadisticas.png" alt="Mis estadísticas con precisión 92%, tiempo total y XP semanal" width="390" height="898"  /></button>
+              <figcaption>Mis estadísticas</figcaption>
+            </figure>
+            <figure class="shot" data-caption="Logros — retos, insignias y recompensas XP">
+              <button class="shot-btn" type="button" aria-label="Ampliar pantalla: Logros"><img src="assets/img/screens/screen-31-logros.png" alt="Logros con progreso de objetivos y recompensas en XP" width="390" height="898"  /></button>
+              <figcaption>Logros</figcaption>
+            </figure>
+          </div>
+          <p class="galeria-note">Mockups y capturas del proyecto original Kodigo. Tocá cualquier pantalla para ampliarla.</p>
+        </div>
+      </section>
+
+      <!-- Dialog / lightbox -->
+      <dialog class="lightbox" id="lightbox" aria-label="Visor de pantalla de Kodigo">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar visor">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <figure class="lightbox-figure">
+          <div class="phone phone-lightbox">
+            <img id="lightbox-img" src="assets/img/screens/screen-13-portal.png" alt="" width="390" height="898" />
+          </div>
+          <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+        </figure>
+      </dialog>
+
+      <!-- ════════════ G. BENEFICIOS ════════════ -->
+      <section class="section" id="beneficios" aria-labelledby="beneficios-title">
+        <div class="container beneficios-grid">
+          <div class="beneficios-aside">
+            <p class="eyebrow"><span class="eyebrow-mark">//</span> POR QUÉ KODIGO</p>
+            <h2 class="section-title" id="beneficios-title">Aprender con<br />Kodigo rinde.</h2>
+            <p class="lead">Aprender programación exige constancia: Kodigo la premia.</p>
+            <img class="beneficios-ghost" src="assets/img/fantasma-normal.png" alt="Fantasma Kodigo, la mascota oficial de Kodigo" width="150" height="143" loading="lazy" />
+          </div>
+
+          <ol class="benefit-list">
+            <li class="benefit">
+              <span class="benefit-num">01</span>
+              <div><h3>Empezás desde cero, de verdad</h3><p>La primera unidad arranca en variables y tipos de datos. Nada de suponer que ya sabés — Kodigo enseña desde el primer ladrillo.</p></div>
+            </li>
+            <li class="benefit">
+              <span class="benefit-num">02</span>
+              <div><h3>Aprendés haciendo, no memorizando</h3><p>Cada concepto se cierra escribiendo, completando u ordenando código. La teoría llega primero, pero la práctica es la que fija el conocimiento.</p></div>
+            </li>
+            <li class="benefit">
+              <span class="benefit-num">03</span>
+              <div><h3>Feedback inmediato y honesto</h3><p>Sabés al instante si tu respuesta es correcta y por qué. Sin esperar a un docente, sin corregir a mano — el servidor evalúa cada intento.</p></div>
+            </li>
+            <li class="benefit">
+              <span class="benefit-num">04</span>
+              <div><h3>Tu progreso te sigue</h3><p>XP, nivel, racha y unidades desbloqueadas quedan guardados en tu cuenta. Y si entraste como invitado, tu avance se convierte con vos al registrarte.</p></div>
+            </li>
+            <li class="benefit">
+              <span class="benefit-num">05</span>
+              <div><h3>La constancia tiene recompensa</h3><p>Rachas diarias, logros y niveles que premian aparecer todos los días — aunque sea con una sola lección.</p></div>
+            </li>
+            <li class="benefit">
+              <span class="benefit-num">06</span>
+              <div><h3>A tu ritmo, en tu idioma</h3><p>Sin horarios ni clases en vivo: aprendé cuando puedas, con contenido y app en español, pensados para hispanohablantes.</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ════════════ H. CTA FINAL ════════════ -->
+      <section class="cta-band" id="comenzar" aria-labelledby="comenzar-title">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="container cta-inner">
+          <img class="cta-ghost" src="assets/img/fantasma-feliz.png" alt="Fantasma Kodigo feliz, la mascota oficial de Kodigo" width="120" height="115" loading="lazy" />
+          <p class="eyebrow eyebrow-center"><span class="eyebrow-mark">//</span> KODI GO</p>
+          <h2 class="cta-title" id="comenzar-title">Nunca había sido tan<br />fácil aprender a programar.</h2>
+          <p class="cta-sub">
+            Cursos, lecciones y actividades interactivas en un mismo lugar.<br />
+            Elegí un lenguaje y escribí tu primera línea hoy.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="https://github.com/MaiteVazquez8/KodiGo-website" target="_blank" rel="noopener noreferrer">
+              Ver el proyecto en GitHub
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#galeria">Explorar las pantallas</a>
+          </div>
+          <p class="cta-terminal" aria-hidden="true"><span class="terminal-prompt">$</span> <span id="cta-typed">kodigo start --desde-cero</span><span class="terminal-cursor" id="terminal-cursor"></span></p>
+          <p class="cta-note">Kodigo está en desarrollo activo. El código y los mockups viven en el repositorio del proyecto.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ════════════ I. FOOTER ════════════ -->
+    <footer class="footer" aria-label="Pie de página">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand-footer" href="#inicio" aria-label="Kodigo — volver al inicio">
+              <img class="brand-ghost" src="assets/img/kodigo-ghost.png" alt="" width="36" height="34" />
+              <span class="brand-word">KODI<span>GO</span></span>
+            </a>
+            <p>Gamifica tu aprendizaje de código. Una plataforma educativa para aprender programación desde cero, con cursos, lecciones y actividades interactivas.</p>
+          </div>
+
+          <nav class="footer-col" aria-label="Explorar el sitio">
+            <p class="footer-heading">EXPLORAR</p>
+            <a href="#sobre">Sobre Kodigo</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#galeria">Galería</a>
+            <a href="#beneficios">Beneficios</a>
+          </nav>
+
+          <div class="footer-col">
+            <p class="footer-heading">PROYECTO</p>
+            <a href="https://github.com/MaiteVazquez8/KodiGo-website" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a>
+            <p class="footer-fact">Estado: <strong>en desarrollo activo</strong></p>
+            <p class="footer-fact">Versión <strong>1.0.0</strong></p>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-heading">CRÉDITOS</p>
+            <p class="footer-fact">Identidad visual, mascota y mockups:<br />proyecto Kodigo.</p>
+            <p class="footer-fact">Iconos: Lucide.<br />Tipografías: Manrope, Space Grotesk y JetBrains Mono.</p>
+          </div>
+        </div>
+
+        <div class="footer-bar">
+          <p>© <span id="footer-year">2026</span> Kodigo — Gamifica tu aprendizaje de código.</p>
+          <p class="footer-made">Hecho con HTML, CSS y JavaScript puro.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Iconos Lucide vía SVG inline (sin dependencias de interfaz) -->
+    <script src="js/lucide-lite.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
