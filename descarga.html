@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Descargar Kodigo para Android — Instalar el APK paso a paso</title>
+    <meta
+      name="description"
+      content="Descargá el APK oficial de Kodigo 1.0.0 para Android y aprendé cómo instalarlo paso a paso: permisos de origen desconocido, aviso de Play Protect y cómo verificarlo con SHA-256."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" href="assets/img/kodigo-ghost.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Descargar Kodigo para Android — APK 1.0.0" />
+    <meta
+      property="og:description"
+      content="Instalá Kodigo en tu Android en 3 pasos: descargá el APK oficial, permití la instalación desde tu navegador y confirmá el aviso de Play Protect. Incluye SHA-256 del archivo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/kodigo-ghost.png" />
+
+    <!-- Tipografías (mismas que la app: Manrope, Space Grotesk y JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- ════════════ A. NAVBAR ════════════ -->
+    <header class="navbar" id="navbar">
+      <div class="container navbar-inner">
+        <a class="brand" href="index.html#inicio" aria-label="Kodigo — ir al inicio">
+          <img class="brand-ghost" src="assets/img/kodigo-ghost.png" alt="" width="40" height="38" />
+          <span class="brand-word">KODI<span>GO</span></span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+          <a href="index.html#sobre">Sobre Kodigo</a>
+          <a href="index.html#como-funciona">Cómo funciona</a>
+          <a href="index.html#funcionalidades">Funcionalidades</a>
+          <a href="index.html#galeria">Galería</a>
+          <a href="index.html#beneficios">Beneficios</a>
+          <a href="descarga.html" class="is-active" aria-current="page">Descargar</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm nav-cta" href="#apk">Descargar APK</a>
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Abrir menú"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- ════════════ B. HERO DE DESCARGA ════════════ -->
+      <section class="download-hero" aria-label="Descargar Kodigo para Android">
+        <div class="container download-inner">
+          <p class="eyebrow eyebrow-center"><span class="eyebrow-mark">//</span> DESCARGA · ANDROID</p>
+          <h1 class="download-title">Instalá Kodigo<br />en tu Android.</h1>
+          <p class="download-sub">
+            Kodigo todavía no está en Google Play, así que la app se distribuye directo desde esta
+            página: descargás el APK oficial, permitís la instalación desde tu navegador y confirmás
+            el aviso de Android. En 3 pasos y en menos de 3 minutos.
+          </p>
+          <div class="download-ctas">
+            <a class="btn btn-primary btn-lg" href="descargas/kodigo-1.0.0.apk" download="kodigo-1.0.0.apk">
+              Descargar APK · 4,6 MB
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#pasos">Ver el paso a paso</a>
+          </div>
+          <ul class="download-badges" aria-label="Garantías del archivo">
+            <li class="dl-badge"><i data-lucide="shield-check"></i>APK firmado · v1.0.0</li>
+            <li class="dl-badge"><i data-lucide="package"></i>com.kodigo.app · Android 7.0+</li>
+            <li class="dl-badge"><i data-lucide="wifi"></i>Permisos: solo INTERNET</li>
+            <li class="dl-badge"><i data-lucide="check"></i>SHA-256 verificable</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ════════════ C. EL ARCHIVO ════════════ -->
+      <section class="section" id="apk" aria-labelledby="apk-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> EL ARCHIVO OFICIAL</p>
+          <h2 class="section-title" id="apk-title" style="font-size: clamp(1.6rem, 3vw, 2.2rem)">Descargá el<br />mismo APK del proyecto.</h2>
+
+          <figure class="file-card">
+            <div class="file-icon" aria-hidden="true">
+              <img src="assets/img/kodigo-ghost.png" alt="" width="58" height="55" />
+            </div>
+            <div>
+              <p class="file-name">kodigo-1.0.0.apk</p>
+              <div class="file-meta">
+                <span>Versión <strong>1.0.0</strong> (compilación 1)</span>
+                <span>Tamaño <strong>4.824.909 bytes</strong> (≈ 4,6 MB)</span>
+                <span>Compilado el <strong>16 nov 2026</strong></span>
+              </div>
+              <div class="file-hash-row">
+                <span class="file-hash-label">SHA-256</span>
+                <code class="file-hash" id="apk-hash">6168b42b038c66a80b239ed68f28d6cf97b68acbdab74ec223d9e3e017b96e18</code>
+                <button class="copy-btn" type="button" data-copy="6168b42b038c66a80b239ed68f28d6cf97b68acbdab74ec223d9e3e017b96e18" aria-label="Copiar el SHA-256 del APK">
+                  <i data-lucide="copy"></i><span class="copy-label">Copiar</span>
+                </button>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="descargas/kodigo-1.0.0.apk" download="kodigo-1.0.0.apk">
+              <i data-lucide="download"></i>
+              Descargar
+            </a>
+          </figure>
+
+          <div class="req-grid" aria-label="Requisitos" style="margin-top: 1.5rem">
+            <div class="req-card">
+              <i data-lucide="smartphone"></i>
+              <div><strong>Android 7.0 o superior</strong><span>API 24 (Nougat) en adelante, teléfono o tablet. No disponible para iPhone/iOS por ahora.</span></div>
+            </div>
+            <div class="req-card">
+              <i data-lucide="package"></i>
+              <div><strong>~20 MB libres</strong><span>El APK pesa ≈ 4,6 MB; reservá algo más para la instalación y los datos de la app.</span></div>
+            </div>
+            <div class="req-card">
+              <i data-lucide="wifi"></i>
+              <div><strong>Conexión a internet</strong><span>El progreso, la racha, los logros y la Liga de Honor viven en el servidor de Kodigo. Sin conexión no funciona.</span></div>
+            </div>
+            <div class="req-card">
+              <i data-lucide="ghost"></i>
+              <div><strong>Sin cuenta, si querés</strong><span>Podés entrar como invitado y practicar al instante. Si te registrás después, tu progreso se convierte con vos.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ D. PASOS ════════════ -->
+      <section class="section section-alt" id="pasos" aria-labelledby="pasos-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> PASO A PASO</p>
+          <h2 class="section-title" id="pasos-title">De cero a Kodigo<br />instalada, en 6 pasos.</h2>
+
+          <ol class="steps" style="margin-top: clamp(1.5rem, 3vw, 2.5rem)">
+            <li class="step">
+              <span class="step-num">01</span>
+              <div>
+                <h3>Descargá el APK</h3>
+                <p>
+                  Tocá <strong>«Descargar APK»</strong>. Si el navegador te advierte que
+                  «este tipo de archivo puede dañar tu dispositivo», elegí
+                  <strong>Descargar de todas formas</strong>: es el aviso genérico que Android muestra
+                  para cualquier archivo <code>.apk</code>, no un diagnóstico de este archivo.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">02</span>
+              <div>
+                <h3>Abrí el archivo descargado</h3>
+                <p>
+                  Cuando termine la descarga, tocá la notificación «Descarga finalizada» o abrí tu
+                  gestor de archivos y buscá <code>kodigo-1.0.0.apk</code> en la carpeta
+                  <strong>Descargas</strong>.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">03</span>
+              <div>
+                <h3>Permití instalar desde esta fuente</h3>
+                <p>
+                  Android no instala APKs sin un permiso explícito. Si aparece «Por tu seguridad,
+                  tu teléfono no tiene permitido instalar apps desconocidas desde esta fuente»,
+                  tocá <strong>Configuración</strong> y activá <strong>Permitir de esta fuente</strong>
+                  para tu navegador o gestor de archivos (en algunos modelos vive en
+                  <strong>Ajustes → Apps → Acceso especial → Instalar apps desconocidas</strong>).
+                </p>
+                <ul>
+                  <li>Es un permiso <strong>por aplicación</strong>: solo le das permiso a ese navegador, no a todo el teléfono.</li>
+                  <li>Android 7 o anterior: <strong>Ajustes → Seguridad → Orígenes desconocidos</strong>.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">04</span>
+              <div>
+                <h3>Confirmá la instalación</h3>
+                <p>
+                  Volvé atrás y tocá <strong>Instalar</strong>. Lo normal es que Android o
+                  <strong>Play Protect</strong> muestren un aviso antes de instalar
+                  («aplicación no verificada», «aplicación bloqueada», «no se reconoce el
+                  desarrollador»). Es lo esperado en una app fuera de Google Play: tocá
+                  <strong>Instalar de todas formas</strong>.
+                </p>
+                <ul>
+                  <li>¿Por qué aparece eso? Lo explicamos en detalle abajo — adelanto: es un aviso por origen, no una detección de malware.</li>
+                  <li>Si el mensaje dice algo distinto («app dañada», «se encontró software malicioso»), <strong>no instales</strong>: borrá el archivo y descargalo de nuevo desde esta página.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">05</span>
+              <div>
+                <h3>Abrí Kodigo</h3>
+                <p>
+                  Cuando termine, tocá <strong>Abrir</strong> o buscá el fantasma de Kodigo en tu
+                  lista de apps. Elegí tu camino —<strong>JavaScript</strong>, <strong>HTML</strong> o
+                  <strong>Pensamiento Lógico</strong>— o entrá como invitado a practicar al instante.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">06</span>
+              <div>
+                <h3>Dejá los permisos como estaban (recomendado)</h3>
+                <p>
+                  Cuando abra la app, volvé a <strong>Ajustes → Apps → Acceso especial → Instalar apps
+                  desconocidas</strong> y <strong>desactivá «Permitir de esta fuente»</strong> para tu
+                  navegador. No hace falta dejarla encendida. Y si en algún momento desactivaste Play
+                  Protect, volvelo a activar: la instalación ya quedó hecha y Kodigo sigue funcionando.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="callout callout-info" style="margin-top: 1.25rem">
+            <i data-lucide="shield-check"></i>
+            <div>
+              <strong class="callout-title">Todo el proceso puede hacerse con Play Protect encendido</strong>
+              <p>
+                No hace falta desactivarlo: cuando salga el aviso, elegís «Instalar de todas formas» y
+                listo. Play Protect sigue analizando la app como cualquier otra. Más abajo, la
+                justificación completa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ E. PLAY PROTECT ════════════ -->
+      <section class="section" id="play-protect" aria-labelledby="pp-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> LA PREGUNTA OBLIGADA</p>
+          <h2 class="section-title" id="pp-title">¿Por qué Android y Play<br />Protect te avisan?</h2>
+
+          <div class="desc-stack" style="margin-top: clamp(1.5rem, 3vw, 2.5rem)">
+            <p class="lead">
+              Si viste el cartel de Google Play Protect —«aplicación no verificada», «aplicación
+              bloqueada» o «no se reconoce el desarrollador»— que sepas que no es un diagnóstico de
+              malware: es lo que le pasa a <strong>cualquier app legítima</strong> que no viene de
+              Google Play.
+            </p>
+
+            <h3 class="body-text" style="font-size: 1rem; font-family: var(--font-brand)">La razón exacta, sin rodeos</h3>
+            <ol class="steps" style="gap: 0.6rem">
+              <li class="step" style="grid-template-columns: 40px minmax(0, 1fr); padding: 0.9rem 1.1rem">
+                <span class="step-num" style="height: 40px; font-size: 1.1rem; border-radius: 10px">1</span>
+                <p><strong>Kodigo no está publicado todavía en Google Play.</strong> Nació como proyecto para la ExpoTécnica y está en desarrollo activo. Sin tienda de por medio, no existe «historial de escaneo»: Play Protect no tiene con qué compararlo.</p>
+              </li>
+              <li class="step" style="grid-template-columns: 40px minmax(0, 1fr); padding: 0.9rem 1.1rem">
+                <span class="step-num" style="height: 40px; font-size: 1.1rem; border-radius: 10px">2</span>
+                <p><strong>Play Protect asigna reputación, no certifica seguridad.</strong> Cruza la firma y el paquete con su base de apps y desarrolladores verificados en Play Store. Un APK firmado con una clave propia —como el de cualquier proyecto independiente— no tiene reputación previa: el aviso es por <strong>origen desconocido</strong>, no porque haya encontrado código malicioso.</p>
+              </li>
+              <li class="step" style="grid-template-columns: 40px minmax(0, 1fr); padding: 0.9rem 1.1rem">
+                <span class="step-num" style="height: 40px; font-size: 1.1rem; border-radius: 10px">3</span>
+                <p><strong>El archivo es el build release oficial.</strong> <code>versionName 1.0.0</code> (compilación 1), paquete <code>com.kodigo.app</code>, firmado con el esquema <strong>APK Signature Scheme v2</strong> y el certificado del proyecto (<code>CN=Kodigo, OU=Comunidad, O=Kodigo, L=Buenos Aires, C=AR</code>). El mismo certificado firma esta y las próximas versiones: podés comparar el SHA-256 acá abajo.</p>
+              </li>
+              <li class="step" style="grid-template-columns: 40px minmax(0, 1fr); padding: 0.9rem 1.1rem">
+                <span class="step-num" style="height: 40px; font-size: 1.1rem; border-radius: 10px">4</span>
+                <p><strong>Todo lo que fabrica este APK es público.</strong> El sitio, los mockups y la app viven en <a href="https://github.com/MaiteVazquez8/KodiGo-website" target="_blank" rel="noopener noreferrer">el repositorio de GitHub del proyecto</a>. Cualquiera puede auditar el código y comprobar que el archivo publicado corresponde a ese código.</p>
+              </li>
+            </ol>
+
+            <div class="callout callout-warn">
+              <i data-lucide="alert-triangle"></i>
+              <div>
+                <strong class="callout-title">Qué NO hace falta hacer</strong>
+                <p>
+                  <strong>No hace falta desactivar Play Protect por completo</strong>, ni desinstalar tu
+                  antivirus, ni rootear el teléfono, ni dar permisos extra (la app solo pide internet),
+                  ni desactivar el resto de las defensas de Android. Nada de eso «arregla» la instalación:
+                  lo único necesario son los dos vistos buenos puntuales —permitir la fuente y tocar
+                  <strong>Instalar de todas formas</strong>— y después podés dejar todo como estaba.
+                </p>
+                <p>
+                  <strong>Si desactivaste Play Protect</strong> para poder instalar, reactivalo apenas
+                  termines: <strong>Play Store → tu foto de perfil → Play Protect → activar Play Protect</strong>.
+                  La app ya instalada no se borra ni se rompe.
+                </p>
+              </div>
+            </div>
+
+            <div class="callout callout-safe">
+              <i data-lucide="shield-check"></i>
+              <div>
+                <strong class="callout-title">La forma segura de confiar</strong>
+                <p>
+                  No confíes «porque sí»: <strong>verificá el SHA-256 del archivo</strong> con las
+                  instrucciones de la próxima sección. Si coincide con el publicado en esta página, el
+                  archivo es exactamente el que compiló el equipo de Kodigo el 16 de noviembre de 2026 —
+                  ni un byte distinto. Eso, más la firma v2 con el certificado CN=Kodigo, es toda la
+                  garantía que necesitás.
+                </p>
+              </div>
+            </div>
+
+            <div class="callout callout-info">
+              <i data-lucide="info"></i>
+              <div>
+                <strong class="callout-title">Cuándo sí desconfiar</strong>
+                <p>
+                  Sospechá —y no instales— si: el aviso menciona <strong>software malicioso detectado</strong>
+                  o «<strong>app dañada</strong>»; el archivo vino de un chat, un grupo o un sitio que no sea
+                  este o el repositorio oficial; o el SHA-256 no coincide. En cualquiera de esos casos:
+                  borrá el archivo y descargalo únicamente desde <strong>esta página</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ F. VERIFICAR ════════════ -->
+      <section class="section section-alt" id="verificar" aria-labelledby="verificar-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> VERIFICACIÓN OPCIONAL</p>
+          <h2 class="section-title" id="verificar-title">Comprobá que el archivo<br />es auténtico.</h2>
+
+          <p class="lead" style="margin-top: 1.25rem; max-width: 72ch">
+            El SHA-256 es la huella digital del archivo: si el APK fue alterado aunque sea en un byte,
+            el resultado cambia por completo. Compará lo que imprime tu computadora con el hash publicado
+            acá (no distingue mayúsculas/minúsculas):
+          </p>
+
+          <div class="desc-stack" style="margin-top: 1.25rem">
+            <div class="hash-block"># Windows (Símbolo del sistema / PowerShell)
+certutil -hashfile kodigo-1.0.0.apk SHA256
+
+# macOS / Linux
+sha256sum kodigo-1.0.0.apk</div>
+
+            <div class="file-hash-row" style="margin-top: 0">
+              <span class="file-hash-label">HASH ESPERADO</span>
+              <code class="file-hash hash-expected">6168b42b038c66a80b239ed68f28d6cf97b68acbdab74ec223d9e3e017b96e18</code>
+              <button class="copy-btn" type="button" data-copy="6168b42b038c66a80b239ed68f28d6cf97b68acbdab74ec223d9e3e017b96e18" aria-label="Copiar el SHA-256 esperado">
+                <i data-lucide="copy"></i><span class="copy-label">Copiar</span>
+              </button>
+            </div>
+
+            <p class="body-text" style="font-size: 0.85rem">
+              ¿Querés ir más lejos? El APK está firmado con el esquema v2. Con las herramientas de
+              Android SDK podés auditar el certificado: <code>apksigner verify --print-certs kodigo-1.0.0.apk</code> —
+              debería responder <code>CN=Kodigo, OU=Comunidad, O=Kodigo, L=Buenos Aires, ST=Buenos Aires, C=AR</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ G. PERMISOS ════════════ -->
+      <section class="section" id="permisos" aria-labelledby="permisos-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> TRANSPARENCIA</p>
+          <h2 class="section-title" id="permisos-title">Qué permisos pide<br />la app. Y cuáles no.</h2>
+
+          <div class="table-scroll" style="margin-top: clamp(1.5rem, 3vw, 2.5rem)">
+            <table class="perm-table">
+              <thead>
+                <tr><th scope="col">Permiso</th><th scope="col">¿Lo pide?</th><th scope="col">Para qué</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INTERNET</td>
+                  <td class="perm-yes">Sí</td>
+                  <td>Sincronizar tu progreso, la racha, los logros, los amigos y la Liga de Honor con el servidor de Kodigo. Por eso la app no funciona sin conexión.</td>
+                </tr>
+                <tr>
+                  <td>Cámara / micrófono</td>
+                  <td class="perm-no">No</td>
+                  <td>La app nunca los solicita.</td>
+                </tr>
+                <tr>
+                  <td>Contactos / SMS / llamadas</td>
+                  <td class="perm-no">No</td>
+                  <td>La app nunca los solicita. Agregar amigos es por nombre de usuario dentro de Kodigo.</td>
+                </tr>
+                <tr>
+                  <td>Ubicación</td>
+                  <td class="perm-no">No</td>
+                  <td>La app nunca la solicita.</td>
+                </tr>
+                <tr>
+                  <td>Archivos / almacenamiento</td>
+                  <td class="perm-no">No</td>
+                  <td>La app nunca los solicita; Android gestiona la instalación del propio APK.</td>
+                </tr>
+                <tr>
+                  <td>Instalar apps (REQUEST_INSTALL_PACKAGES)</td>
+                  <td class="perm-no">No</td>
+                  <td>Kodigo no instala ni actualiza otras apps.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="galeria-note" style="margin-top: 0.85rem">Declaración única del <code>AndroidManifest.xml</code> del proyecto: <code>android.permission.INTERNET</code>. Verificable en el repositorio del proyecto.</p>
+        </div>
+      </section>
+
+      <!-- ════════════ H. FAQ ════════════ -->
+      <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow-mark">//</span> PREGUNTAS FRECUENTES</p>
+          <h2 class="section-title" id="faq-title">Lo que todos<br />preguntan antes de instalar.</h2>
+
+          <div class="faq" style="margin-top: clamp(1.5rem, 3vw, 2.5rem)">
+            <details class="faq-item">
+              <summary>¿Por qué Kodigo no está en Google Play?</summary>
+              <div class="faq-body">
+                Todavía no está publicada. Kodigo nació como proyecto para la ExpoTécnica y está en
+                desarrollo activo; hoy se distribuye de forma directa desde esta página. El código, los
+                mockups y este sitio son públicos en
+                <a href="https://github.com/MaiteVazquez8/KodiGo-website" target="_blank" rel="noopener noreferrer">el repositorio de GitHub</a>,
+                así que podés auditar de dónde sale el APK. Cuando la app llegue a Play Store, se va a
+                poder instalar desde ahí con actualizaciones automáticas.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Hace falta desactivar Play Protect o «los orígenes desconocidos» para siempre?</summary>
+              <div class="faq-body">
+                No. La instalación solo necesita dos vistos buenos puntuales: permitir la instalación
+                desde la fuente (tu navegador) y confirmar el aviso con «Instalar de todas formas».
+                Después podés desactivar «Permitir de esta fuente» y dejar Play Protect encendido.
+                Si lo desactivaste, reactivalo: <strong>Play Store → tu foto → Play Protect → activar Play Protect</strong>.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>«App no instalada» o «archivo dañado»: ¿qué hago?</summary>
+              <div class="faq-body">
+                Casi siempre la descarga llegó incompleta: borrá el archivo, descargalo de nuevo desde
+                esta página y compará el SHA-256 (instrucciones más arriba). Si el hash no coincide, no
+                instales nada. Si coincide y el error persiste, desinstalá una copia anterior de Kodigo
+                (mismo paquete <code>com.kodigo.app</code>) y reintentá.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Cómo se actualiza Kodigo?</summary>
+              <div class="faq-body">
+                Cuando salga una versión nueva, esta página va a ofrecer el APK actualizado. Descargalo
+                e instalalo encima de la versión instalada: Android la reconoce como la misma app
+                (mismo <code>com.kodigo.app</code>, mismo certificado) y conserva tu progreso.
+                Todavía no hay auto-actualización.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Funciona en iPhone o iPad?</summary>
+              <div class="faq-body">
+                No por ahora. El APK es exclusivo de Android 7.0 o superior. iOS está en el radar del
+                proyecto, sin fecha.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Kodigo pide datos de pago o tarjeta?</summary>
+              <div class="faq-body">
+                No. Kodigo es gratis y la descarga no pide datos de pago en ningún momento. Si alguien
+                te pide dinero a cambio de «el APK de Kodigo», es una estafa: solo descargá desde esta
+                página o desde el repositorio oficial.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>¿Puedo confiar en este archivo sin conocer a nadie del proyecto?</summary>
+              <div class="faq-body">
+                Sí, porque no tenés que creer en nuestra palabra: el SHA-256 del archivo está publicado
+                en esta página y el hash del APK que descargues tiene que ser exactamente ese. Además,
+                la firma v2 con el certificado <code>CN=Kodigo</code> demuestra que el archivo salió del
+                keystore del proyecto y no fue re-empaquetado. Es la misma clase de verificación que se
+                aplica a cualquier distribución de software fuera de una tienda oficial.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════ I. CTA FINAL ════════════ -->
+      <section class="cta-band" aria-labelledby="descarga-cta-title">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="container cta-inner">
+          <img class="cta-ghost" src="assets/img/fantasma-feliz.png" alt="Fantasma Kodigo feliz, la mascota oficial de Kodigo" width="110" height="105" loading="lazy" />
+          <p class="eyebrow eyebrow-center"><span class="eyebrow-mark">//</span> TODO LISTO</p>
+          <h2 class="cta-title" id="descarga-cta-title" style="font-size: clamp(1.7rem, 4.2vw, 2.6rem)">Ahora, a programar.</h2>
+          <p class="cta-sub">
+            Con la app instalada, lo difícil ya está hecho —<br />
+            elegí tu lenguaje —o tu robot— y escribí tu primera línea hoy.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="descargas/kodigo-1.0.0.apk" download="kodigo-1.0.0.apk">
+              Descargar APK · 4,6 MB
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="index.html#como-funciona">Ver cómo funciona Kodigo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ════════════ J. FOOTER ════════════ -->
+    <footer class="footer" aria-label="Pie de página">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand-footer" href="index.html#inicio" aria-label="Kodigo — volver al inicio">
+              <img class="brand-ghost" src="assets/img/kodigo-ghost.png" alt="" width="36" height="34" />
+              <span class="brand-word">KODI<span>GO</span></span>
+            </a>
+            <p>Gamifica tu aprendizaje de código. Una plataforma educativa para aprender programación desde cero, con cursos, lecciones y actividades interactivas.</p>
+          </div>
+
+          <nav class="footer-col" aria-label="Explorar el sitio">
+            <p class="footer-heading">EXPLORAR</p>
+            <a href="index.html#sobre">Sobre Kodigo</a>
+            <a href="index.html#como-funciona">Cómo funciona</a>
+            <a href="index.html#funcionalidades">Funcionalidades</a>
+            <a href="index.html#galeria">Galería</a>
+            <a href="index.html#beneficios">Beneficios</a>
+            <a href="descarga.html">Descargar APK</a>
+          </nav>
+
+          <div class="footer-col">
+            <p class="footer-heading">PROYECTO</p>
+            <a href="https://github.com/MaiteVazquez8/KodiGo-website" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a>
+            <p class="footer-fact">Estado: <strong>en desarrollo activo</strong></p>
+            <p class="footer-fact">App Android <strong>1.0.0</strong> · Android 7.0+</p>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-heading">CRÉDITOS</p>
+            <p class="footer-fact">Identidad visual, mascota y mockups:<br />proyecto Kodigo.</p>
+            <p class="footer-fact">App Android compilada con Capacitor.<br />Iconos: Lucide.<br />Tipografías: Manrope, Space Grotesk y JetBrains Mono.</p>
+          </div>
+        </div>
+
+        <div class="footer-bar">
+          <p>© <span id="footer-year">2026</span> Kodigo — Gamifica tu aprendizaje de código.</p>
+          <p class="footer-made">Hecho con HTML, CSS y JavaScript puro.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Iconos Lucide vía SVG inline (sin dependencias de interfaz) -->
+    <script src="js/lucide-lite.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -23,6 +23,7 @@ ready(function () {
   initGallery();
   initLightbox();
   initTypedTerminal();
+  initCopyButtons();
 });
 
 /* ---------- Año del footer ---------- */
@@ -131,7 +132,7 @@ function initReveal() {
     '.hero-copy > *, .hero-stage > *, .eyebrow, .section-title, .lead, .body-text, ' +
       '.pillars li, .lema, .catalog-panel, .recorrido-tab, .recorrido-stage, ' +
       '.bcell, .shot, .galeria-head, .galeria-note, .benefit, .beneficios-aside, ' +
-      '.cta-inner > *'
+      '.cta-inner > *, .file-card, .req-card, .step, .callout, .faq-item, .download-badges > *'
   );
 
   var index = 0;
@@ -360,6 +361,54 @@ function initLightbox() {
   });
   dialog.addEventListener('close', function () {
     if (lastTrigger) lastTrigger.focus();
+  });
+}
+
+/* ---------- Botones copiar (SHA-256 y comandos) ---------- */
+function initCopyButtons() {
+  var buttons = document.querySelectorAll('[data-copy]');
+  if (!buttons.length) return;
+
+  var copyText = function (text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var helper = document.createElement('textarea');
+      helper.value = text;
+      helper.setAttribute('readonly', '');
+      helper.style.position = 'fixed';
+      helper.style.opacity = '0';
+      document.body.appendChild(helper);
+      helper.select();
+      try {
+        document.execCommand('copy');
+        document.body.removeChild(helper);
+        resolve();
+      } catch (error) {
+        document.body.removeChild(helper);
+        reject(error);
+      }
+    });
+  };
+
+  buttons.forEach(function (button) {
+    var label = button.querySelector('.copy-label');
+    var original = label ? label.textContent : button.textContent;
+    button.addEventListener('click', function () {
+      var text = button.getAttribute('data-copy') || '';
+      copyText(text.trim()).then(function () {
+        if (label) label.textContent = '¡Copiado!';
+        else button.textContent = '¡Copiado!';
+        button.setAttribute('aria-live', 'polite');
+        window.setTimeout(function () {
+          if (label) label.textContent = original;
+          else button.textContent = original;
+        }, 1800);
+      }).catch(function () {
+        window.prompt('Copiá el texto manualmente (Ctrl+C):', text);
+      });
+    });
   });
 }
 
