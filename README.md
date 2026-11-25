@@ -27,7 +27,7 @@ certutil -hashfile descargas\app-debug.apk SHA256   # Windows
 sha256sum descargas/app-debug.apk                   # macOS/Linux
 ```
 
-SHA-256 esperado: `543bd863a1fb727f68a67c5f296115a1d4b4ced6c3188960acfb58ba42927a61`
+SHA-256 esperado: `ea9a38e5976e84c095c66b732ae6e144ce2c6402b27f9ca2e8a5083707737aa7`
 
 ## Créditos de iconos
 
