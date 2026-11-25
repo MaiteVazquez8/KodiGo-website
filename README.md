@@ -18,7 +18,7 @@ Este repositorio contiene su página web oficial (landing + tutorial de descarga
 - `js/main.js` — interacciones vanilla (navbar sticky, menú móvil, scroll-spy, galería con lightbox, botones «Copiar»).
 - `js/lucide-lite.js` — iconos SVG inline reemplazados desde `<i data-lucide="...">`.
 - `assets/` — logos de cursos (JS, HTML, Python, Java, C++, C#, CSS, React, Vue, Node.js, PHP, TypeScript, SQL), mascota Kodigo y mockups de la app.
-- `descargas/app-debug.apk` — build de depuración (debug) más reciente del proyecto (compilado el 19/11/2026, `versionName 1.0.0`, `com.kodigo.app`, Android 7.0+), firmado con la clave estándar de depuración de Android (`CN=Android Debug`). El build release definitivo firmará con el certificado del proyecto (`CN=Kodigo`).
+- `descargas/app-debug.apk` — build de depuración (debug) más reciente del proyecto (compilado el 19/11/2026, `versionName 1.1.0`, `com.kodigo.app`, Android 7.0+), firmado con la clave estándar de depuración de Android (`CN=Android Debug`). El build release definitivo firmará con el certificado del proyecto (`CN=Kodigo`).
 
 ## Verificar el APK
 
@@ -27,7 +27,7 @@ certutil -hashfile descargas\app-debug.apk SHA256   # Windows
 sha256sum descargas/app-debug.apk                   # macOS/Linux
 ```
 
-SHA-256 esperado: `9e29b540bfc76362a4d7544dca09d5f70f6db9ce1d9cbecf929a558df3f2f6b1`
+SHA-256 esperado: `543bd863a1fb727f68a67c5f296115a1d4b4ced6c3188960acfb58ba42927a61`
 
 ## Créditos de iconos
 
